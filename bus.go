@@ -11,6 +11,6 @@ func NewSynchronousBus() *SynchronousBus {
 	return &SynchronousBus{}
 }
 
-func (bus *SynchronousBus) Send(command Command) error {
+func (bus SynchronousBus) Send(command Command) error {
 	return command.Execute()
 }
